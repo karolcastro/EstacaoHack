@@ -4,6 +4,8 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,8 +29,18 @@ class MainActivity : AppCompatActivity() {
 
         // Clique do botao sair
         btnSair.setOnClickListener {
-            startActivity(Intent(this@MainActivity, LoginActivity::class.java))
-            finish()
+            AlertDialog.Builder(this@MainActivity)
+                .setTitle("Atenção")
+                .setMessage("Você deseja sair mesmo ?")
+                .setPositiveButton("Sim") { _, _ ->
+                    startActivity(Intent(this@MainActivity, LoginActivity::class.java))
+                    finish()
+                }
+                .setNegativeButton("Não") {_, _ ->
+                }
+                .setCancelable(false)
+                .create()
+                .show()
         }
 
         // clique do botao Site Cellep

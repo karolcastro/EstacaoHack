@@ -6,6 +6,7 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import br.com.karoliny.projetocellep.MainActivity
+import br.com.karoliny.projetocellep.R
 import kotlinx.android.synthetic.main.activity_cadastro.*
 
 
@@ -17,7 +18,7 @@ class CadastroActivity : AppCompatActivity() {
         //Criando o spinner
         //Etapa 1: Criar a lista do spinner
         val listaSexo = arrayListOf("Selecione o sexo", "Feminino", "Masculino", "Outros")
-        //listaSexo.add("Kaory")
+        //listaSexo.add("Karoliny")
 
         //Etapa 2: Criar o adapter do Spinner
         val spinnerAdapter = ArrayAdapter(
