@@ -29,7 +29,7 @@
         app:srcCompat="@drawable/logo_hack" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/edtUsuario"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -48,7 +48,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/edtSenhaLogin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -59,12 +59,12 @@
         android:textAlignment="center"
         android:textColor="@color/colorText"
         android:textColorHint="@color/colorText"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintEnd_toEndOf="@+id/edtUsuario"
+        app:layout_constraintStart_toStartOf="@+id/edtUsuario"
+        app:layout_constraintTop_toBottomOf="@+id/edtUsuario" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnEntrar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -74,16 +74,16 @@
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/edtSenhaLogin" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnCadastrarLogin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="CADASTRAR"
         android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="@+id/button"
-        app:layout_constraintStart_toStartOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintEnd_toEndOf="@+id/btnEntrar"
+        app:layout_constraintStart_toStartOf="@+id/btnEntrar"
+        app:layout_constraintTop_toBottomOf="@+id/btnEntrar" />
 </androidx.constraintlayout.widget.ConstraintLayout>

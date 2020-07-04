@@ -1,6 +1,7 @@
 package br.com.karoliny.projetocellep
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
@@ -23,5 +24,17 @@ class MainActivity : AppCompatActivity() {
         txvNomeCompleto.text = "$nome $sobrenome"
         txvEmail.text = minhaPreferencia.getString("email", "Chave não encontrada")
         txvSexo.text = minhaPreferencia.getString("sexo", "Chave não encontrada")
+
+        // Clique do botao sair
+        btnSair.setOnClickListener {
+            startActivity(Intent(this@MainActivity, LoginActivity::class.java))
+            finish()
+        }
+
+        // clique do botao Site Cellep
+        btnSite.setOnClickListener {
+            startActivity(Intent(this@MainActivity, WebsActivity::class.java))
+            finish()
+        }
     }
 }

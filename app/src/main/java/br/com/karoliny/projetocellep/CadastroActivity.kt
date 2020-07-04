@@ -8,6 +8,7 @@ import androidx.appcompat.app.AlertDialog
 import br.com.karoliny.projetocellep.MainActivity
 import kotlinx.android.synthetic.main.activity_cadastro.*
 
+
 class CadastroActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
