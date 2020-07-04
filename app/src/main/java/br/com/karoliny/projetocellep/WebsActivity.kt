@@ -2,6 +2,7 @@
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.webkit.WebViewClient
 import kotlinx.android.synthetic.main.activity_webs.*
 
     class WebsActivity : AppCompatActivity() {
@@ -11,6 +12,6 @@ import kotlinx.android.synthetic.main.activity_webs.*
 
         wbvSite.settings.javaScriptEnabled = true
         wbvSite.loadUrl("http://br.cellep.com/estacaohack")
-        wbvSite.webViewClient = webViewClient()
+        wbvSite.webViewClient = WebViewClient()
     }
 }

@@ -25,7 +25,7 @@ class LoginActivity : AppCompatActivity() {
             } else if (senha.isEmpty()) {
                 edtSenhaLogin.error = "Campo obrigatório"
                 edtSenhaLogin.requestFocus()
-            } else if (usuario == "Kaory" && senha == "1234") {
+            } else if (usuario == "Karoliny" && senha == "1234") {
                 //Apresentando uma mensagem ao usuário
                 Toast.makeText(this@LoginActivity, "Usuário logado com sucesso!", Toast.LENGTH_LONG)
                     .show()
