@@ -1,3 +1,5 @@
+package br.com.karoliny.projetocellep
+
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -10,7 +12,7 @@ import br.com.karoliny.projetocellep.R
 import kotlinx.android.synthetic.main.activity_cadastro.*
 
 
-class CadastroActivity : AppCompatActivity() {
+    class CadastroActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cadastro)
