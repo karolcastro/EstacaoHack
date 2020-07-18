@@ -1,6 +1,7 @@
 package br.com.karoliny.projetocellep
 
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,6 +12,16 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        //Recuperando o email da intende
+        val emailRecuperado = intent.getStringExtra("email");
+
+        //Abrindo o Shared  Preference
+        val minhaPreferencia = getSharedPreferences("cadastro-$emailRecuperado", Context.MODE_PRIVATE);
+
+        //Recuperandi os dados do Shared Prefenrence
+        val senhaCadastrada = minhaPreferencia.getString("senha","Chave nao encontrada")
+
 
         //Clique do botão entrar
         btnEntrar.setOnClickListener {
@@ -25,12 +36,15 @@ class LoginActivity : AppCompatActivity() {
             } else if (senha.isEmpty()) {
                 edtSenhaLogin.error = "Campo obrigatório"
                 edtSenhaLogin.requestFocus()
-            } else if (usuario == "Karoliny" && senha == "1234") {
+            } else if (usuario == emailRecuperado && senha == senhaCadastrada) {
                 //Apresentando uma mensagem ao usuário
                 Toast.makeText(this@LoginActivity, "Usuário logado com sucesso!", Toast.LENGTH_LONG)
                     .show()
                 //Abrir a tela main
-                startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+                startActivity(Intent(this@LoginActivity, MainActivity::class.java).apply {
+                    putExtra("email", emailRecuperado
+                    )
+                })
                 //Tirar a tela do empilhamento
                 finish()
             } else {

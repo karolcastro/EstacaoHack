@@ -77,7 +77,7 @@ import kotlinx.android.synthetic.main.activity_cadastro.*
                 spnSexo.setSelection(0)
 
                 // abrir a tela Main
-                startActivity(Intent(this@CadastroActivity, MainActivity::class.java).apply {
+                startActivity(Intent(this@CadastroActivity, LoginActivity::class.java).apply {
                     //Passagem de parametro de uma tela para a outra
                     putExtra("email", email)
                 })
